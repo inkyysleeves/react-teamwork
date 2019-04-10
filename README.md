@@ -44,15 +44,17 @@ With `username` being any string you wish to use as username, you should see a s
 
 Feature 1 - `<ProfileCard />`
 
-![](../master/img/profile-card.png)
+![ProfileCard](https://github.com/MCRcodes/react-teamwork/master/public/img/profile-card.png)
 
 Feature 2 - `<RepoList />`
 
-![](../master/img/repo-list.png)
+![RepoList](
+    https://github.com/MCRcodes/react-teamwork/master/public/img/repo-list.png
+)
 
 Feature 3 - `<ContributionSummary />`
 
-![](../master/img/contribution-summary.png)
+![ContributionSummary](https://github.com/MCRcodes/react-teamwork/master/public/img/contribution-summary.png)
 
 ### Data source
 
