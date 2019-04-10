@@ -40,21 +40,27 @@ With `username` being any string you wish to use as username, you should see a s
 
 ## Challenge
 
-### Three teams will work on three different features
+### Three teams will work on three different features as follows:
 
-Feature 1 - `<ProfileCard />`
+## Feature 1
 
-![ProfileCard](https://github.com/MCRcodes/react-teamwork/master/public/img/profile-card.png)
+### `<ProfileCard />`
 
-Feature 2 - `<RepoList />`
+![ProfileCard](https://github.com/MCRcodes/react-teamwork/blob/master/public/img/profile-card.png?raw=true)
+
+## Feature 2
+
+### `<RepoList />`
 
 ![RepoList](
-    https://github.com/MCRcodes/react-teamwork/master/public/img/repo-list.png
+   https://github.com/MCRcodes/react-teamwork/blob/master/public/img/repo-list.png?raw=true
 )
 
-Feature 3 - `<ContributionSummary />`
+## Feature 3
 
-![ContributionSummary](https://github.com/MCRcodes/react-teamwork/master/public/img/contribution-summary.png)
+### `<ContributionSummary />`
 
-### Data source
+![ContributionSummary](https://github.com/MCRcodes/react-teamwork/blob/master/public/img/contribution-summary.png?raw=true)
+
+## Data source
 
