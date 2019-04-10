@@ -28,7 +28,7 @@ git checkout -b descriptive-feature-branch-name-here
 npm start
 ```
 
-## Be curious
+## Explore
 
 ### Visit `localhost:8080` in your browser.
 
