@@ -1,13 +1,13 @@
 import React from 'react';
 import RepoCard from './repo-card';
 
-const RepoList = () => (
+const RepoList = (props) => (
   <div>
-    <p>Repo List</p>
+    <p>Repo List for: {props.username}</p>
     <ul>
-      <RepoCard />
-      <RepoCard />
-      <RepoCard />
+      <RepoCard username={props.username} />
+      <RepoCard username={props.username} />
+      <RepoCard username={props.username} />
     </ul>
   </div>
 );

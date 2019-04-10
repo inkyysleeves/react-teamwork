@@ -1,5 +1,5 @@
 import React from 'react';
 
-const RepoCard = () => <li>Repo Card</li>;
+const RepoCard = (props) => <li>Repo Card for: {props.username}</li>;
 
 export default RepoCard;

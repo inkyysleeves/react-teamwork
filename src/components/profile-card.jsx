@@ -1,5 +1,5 @@
 import React from 'react';
 
-const ProfileCard = () => <div>Profile Card</div>;
+const ProfileCard = (props) => <div>Profile Card for: {props.username}</div>;
 
 export default ProfileCard;

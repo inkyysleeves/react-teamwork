@@ -14,12 +14,13 @@ class Profile extends Component {
   componentDidMount() {}
 
   render() {
+    const { username } = this.state;
+
     return (
       <div>
-        <h2>This is the profile for: {this.state.username}</h2>
-        <ProfileCard />
-        <RepoList />
-        <ContributionSummary />
+        <ProfileCard username={username} />
+        <RepoList username={username} />
+        <ContributionSummary username={username} />
       </div>
     );
   }

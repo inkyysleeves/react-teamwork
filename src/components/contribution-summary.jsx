@@ -1,5 +1,5 @@
 import React from 'react';
 
-const ContributionSummary = () => <div>Contribution Summary</div>;
+const ContributionSummary = (props) => <div>Contribution Summary for: {props.username}</div>;
 
 export default ContributionSummary;
