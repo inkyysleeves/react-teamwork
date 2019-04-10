@@ -1,10 +1,10 @@
 # React Teamwork
 
-(write something here)
+Fetch external data to power React components, practice props and state, while all the while working as a team 💪
 
 ## Getting Started
 
-### Clone down this repository (replace `<your_project_name>`:
+### Clone down this repository
 
 ```bash
 git clone git@github.com:MCRcodes/react-teamwork.git
@@ -16,16 +16,43 @@ git clone git@github.com:MCRcodes/react-teamwork.git
 npm install
 ```
 
-### Start up the application:
+### Checkout to your feature branch
+
+```bash
+git checkout -b descriptive-feature-branch-name-here
+```
+
+### Start up the application and visit both routes available:
 
 ```bash
 npm start
 ```
 
+## Be curious
+
 ### Visit `localhost:8080` in your browser.
 
-You should see a **skeleton application** message.
+You should see a **HOME** message
 
-### Change the rendered output
+### Visit `localhost:8080/:username` in your browser.
 
-You can change what is mounted to the DOM in `src/index.jsx`.
+With `username` being any string you wish to use as username, you should see a skeleton user profile.  
+
+## Challenge
+
+### Three teams will work on three different features
+
+Feature 1 - `<ProfileCard />`
+
+![](../master/img/profile-card.png)
+
+Feature 2 - `<RepoList />`
+
+![](../master/img/repo-list.png)
+
+Feature 3 - `<ContributionSummary />`
+
+![](../master/img/contribution-summary.png)
+
+### Data source
+
