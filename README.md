@@ -2,6 +2,8 @@
 
 Fetch external data to power React components, practice props and state, while all the while working as a team 💪
 
+Use git branches for each individual feature, don't forget to commit when some progress has been made 
+
 ## Getting Started
 
 ### Clone down this repository
@@ -64,3 +66,4 @@ With `username` being any string you wish to use as username, you should see a s
 
 ## Data source
 
+JSON api: https://mcr-codes-cohorts.herokuapp.com/
