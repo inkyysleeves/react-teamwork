@@ -67,3 +67,18 @@ With `username` being any string you wish to use as username, you should see a s
 ## Data source
 
 JSON api: https://mcr-codes-cohorts.herokuapp.com/
+
+## Checking other teams' work
+
+*1* - make sure you don’t have any uncommited work by doing `git status`. Commit and push if you wish to keep that work.
+Alternative to CMD+Z - If don’t want to keep *any* of the uncommited work you can use `git stash` to revert all changed code back to last commit. `git stash` can be undone by doing `git stash pop`
+
+*2* - make sure you’re on the master branch of the repo `git checkout master`
+
+*3* - get all the new code pushed to the repository yesterday evening by running `git fetch && git pull`
+
+*4* - notice new branches name in the list of data being fetched in your terminal, like  _feature-3_, _feature1_, _repo-list-dev_ 
+
+*5* - `git checkout branch-name-here` to run the repo using the code in that specific branch. Note we did not use `-b` here as we’re not creating new branches
+
+*6* - run the app as usual with `npm start`
