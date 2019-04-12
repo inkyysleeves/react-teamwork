@@ -6,6 +6,7 @@ class Contribution extends React.Component {
     this.state = {
       contributions: null,
       pushEvents: [],
+      pullRequests: [],
     };
   }
 
@@ -17,8 +18,11 @@ class Contribution extends React.Component {
         return data;
       })
       .then(data => {
-        console.log(data);
-        this.setState({ pushEvents: data.events });
+        this.setState({ pushEvents: data.events.filter(event => event.type === 'PushEvent') });
+        return data;
+      })
+      .then(data => {
+        this.setState({ pullRequests: data.events.filter(event => event.type === 'PullRequestEvent')});
       });
   }
 
@@ -27,19 +31,20 @@ class Contribution extends React.Component {
     const { contributions } = this.state;
     console.log(this.state.pushEvents);
     return this.state.contributions ? (
+      // this.state.pushEvents.filter()
       <div>
-        <p>
+        <h1>
            Contribution Summary for: {this.props.username}
-        </p>
-        <p>
-           total {contributions} contributions.
-        </p>
-        <p>
-          {contributions} contributions in the last month.
-        </p>
-        <p>
-          {contributions} contributions in the last week.
-        </p>
+        </h1>
+        <h2>
+          {this.props.username} Has made a total of {contributions} contributions!
+        </h2>
+        <h2>
+          {this.state.pushEvents.length} of which were Push events!
+        </h2>
+        <h2>
+          And, {this.state.pullRequests.length} Pull Request(s)!
+        </h2>
       </div>
     ) : (
       <div>
