@@ -82,3 +82,13 @@ Alternative to CMD+Z - If don’t want to keep *any* of the uncommited work you 
 *5* - `git checkout branch-name-here` to run the repo using the code in that specific branch. Note we did not use `-b` here as we’re not creating new branches
 
 *6* - run the app as usual with `npm start`
+
+*_PART 2 - if you’re cloning the repo afresh_*
+
+*1* - after cloning, if you do `git branch` it’ll only show the `master` branch
+
+*2* - however if you do `git branch -a` you’ll see all the branches are there in a kind of hidden way
+
+*3* - do `git checkout branch-name-here` to run the repo using the code in  that specific branch
+
+*4* - if in doubt that branch has the most up to date code that has been pushed just do `git pull && git fetch`. In this case it should say all is up to date
