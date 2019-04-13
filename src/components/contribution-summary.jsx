@@ -29,9 +29,7 @@ class Contribution extends React.Component {
 
   render() {
     const { contributions } = this.state;
-    console.log(this.state.pushEvents);
     return this.state.contributions ? (
-      // this.state.pushEvents.filter()
       <div>
         <h1>
            Contribution Summary for: {this.props.username}
