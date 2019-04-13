@@ -22,7 +22,7 @@ class Contribution extends React.Component {
         return data;
       })
       .then(data => {
-        this.setState({ pullRequests: data.events.filter(event => event.type === 'PullRequestEvent')});
+        this.setState({ pullRequests: data.events.filter(event => event.type === 'PullRequestEvent') });
       });
   }
 
