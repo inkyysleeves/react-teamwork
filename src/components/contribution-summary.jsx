@@ -18,11 +18,9 @@ class Contribution extends React.Component {
         return data;
       })
       .then(data => {
-        this.setState({ pushEvents: data.events.filter(event => event.type === 'PushEvent') });
-        return data;
-      })
-      .then(data => {
-        this.setState({ pullRequests: data.events.filter(event => event.type === 'PullRequestEvent') });
+        const pushEvents = data.events.filter(event => event.type === 'PushEvent');
+        const pullRequests = data.events.filter(event => event.type === 'PullRequestEvent');
+        this.setState({ pushEvents, pullRequests });
       });
   }
 
