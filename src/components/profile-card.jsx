@@ -15,28 +15,30 @@ class ProfileCard extends React.Component {
       .then(response => response.json())
       .then(data => this.setState({ profile: data.profile }));
   }
-   
-  
+
   render() {
-    console.log(this.state);
-  if (this.state.profile !== null) {
-      return ( 
-    <div>
-      <img src={this.state.profile.avatar} />
-      <br />
-      <h2>{this.state.profile.login}</h2>
-      <br />
-      <h3>{this.state.profile.location}</h3>
-      <br />
-      <h3>Repos: {this.state.profile.repos}</h3>
-      <br />
-      <h3>Following: {this.state.profile.following}</h3>
-    </div>
-    );
-  } else {
-      return (<div>pending</div>)
+    const {
+      avatar, login, location, repos, following,
+    } = this.state.profile;
+
+    if (login !== null) {
+      return (
+        <div>
+          <img src={avatar} />
+          <br />
+          <h2>{login}</h2>
+          <br />
+          <h3>{location}</h3>
+          <br />
+          <h3>Repos: {repos}</h3>
+          <br />
+          <h3>Following: {following}</h3>
+        </div>
+      );
+    }
+
+    return <div>pending</div>;
   }
- } 
 }
 
 export default ProfileCard;
