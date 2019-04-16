@@ -6,7 +6,7 @@ class ProfileCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      profile: null,
+      profile: {},
     };
   }
 
