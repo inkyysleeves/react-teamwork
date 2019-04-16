@@ -1,5 +1,7 @@
 import React from 'react';
 
+const URL = 'https://mcr-codes-cohorts.herokuapp.com/users/';
+
 class Contribution extends React.Component {
   constructor(props) {
     super(props);
@@ -7,44 +9,57 @@ class Contribution extends React.Component {
       contributions: null,
       pushEvents: [],
       pullRequests: [],
+      error: false,
     };
   }
 
   componentDidMount() {
-    fetch(`https://mcr-codes-cohorts.herokuapp.com/users/${this.props.username}`)
+    fetch(`${URL}${this.props.username}`)
       .then(response => response.json())
-      .then(data => {
-        this.setState({ contributions: data.contributions });
-        return data;
-      })
       .then(data => {
         const pushEvents = data.events.filter(event => event.type === 'PushEvent');
         const pullRequests = data.events.filter(event => event.type === 'PullRequestEvent');
-        this.setState({ pushEvents, pullRequests });
+        this.setState({
+          pushEvents,
+          pullRequests,
+          contributions: data.contributions,
+        });
+      })
+      .catch(error => {
+        this.setState({
+          error: error,
+        });
       });
   }
 
-
   render() {
-    const { contributions } = this.state;
-    return this.state.contributions ? (
+    const {
+      contributions, pushEvents, pullRequests, error,
+    } = this.state;
+    const { username } = this.props;
+
+    if (error) {
+      return <div>Sorry, could not load contribution data. Please reload.</div>;
+    }
+
+    if (contributions === null) {
+      return <div>LOADING</div>;
+    }
+
+    return (
       <div>
-        <h1>
-           Contribution Summary for: {this.props.username}
-        </h1>
+        <h1>Contribution Summary for: {username}</h1>
         <h2>
-          {this.props.username} Has made a total of {contributions} contributions!
+          {username} Has made a total of {contributions} contributions!
         </h2>
         <h2>
-          {this.state.pushEvents.length} of which were Push events!
+          {pushEvents.length} of which were Push event
+          {pushEvents.length > 1 && 's'}!
         </h2>
         <h2>
-          And, {this.state.pullRequests.length} Pull Request(s)!
+          And, {pullRequests.length} Pull Request
+          {pullRequests.length > 1 && 's'}!
         </h2>
-      </div>
-    ) : (
-      <div>
-          LOADING
       </div>
     );
   }
