@@ -1,32 +1,36 @@
 import React from 'react';
 import RepoCard from './repo-card';
 
-const name = 'jackpearsall';
+const URL = 'https://mcr-codes-cohorts.herokuapp.com/users/';
 
 class RepoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {},
+      repos: null,
     };
   }
 
   componentDidMount() {
-    const DATA_URL = `https://mcr-codes-cohorts.herokuapp.com/users/${name}`;
-    fetch(DATA_URL)
+    fetch(`${URL}${this.props.username}`)
       .then(res => res.json())
       .then(data => {
-        return this.setState({ data });
+        return this.setState({ repos: data.repos });
       });
   }
 
   render() {
-    const { repos } = this.state.data;
+    const { repos } = this.state;
+
+    if (!repos) {
+      return <div>loading</div>;
+    }
+
     return (
-      <div>{ !repos ? <div>loading</div> : repos.map((repo, index) => {
+      <div>{ repos.map((repo) => {
         return (
           <RepoCard
-            key={repo.name} 
+            key={repo.name}
             name={repo.name}
             description={repo.description}
             language={repo.language}
