@@ -26,7 +26,7 @@ class RepoList extends React.Component {
       <div>{ !repos ? <div>loading</div> : repos.map((repo, index) => {
         return (
           <RepoCard
-            key={index} 
+            key={repo.name} 
             name={repo.name}
             description={repo.description}
             language={repo.language}
