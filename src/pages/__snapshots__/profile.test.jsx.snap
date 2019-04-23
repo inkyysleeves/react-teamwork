@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile page should render 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Get Stats
+  </button>
+  <br />
+  <br />
+  <ProfileCard
+    profile={
+      Object {
+        "followers": 20,
+        "name": "ersel",
+      }
+    }
+    username="ersel"
+  />
+  <RepoList
+    repos={
+      Array [
+        Object {
+          "name": "jQuery",
+        },
+      ]
+    }
+    username="ersel"
+  />
+  <ContributionSummary
+    contributions={
+      Object {
+        "count": 2000,
+      }
+    }
+    events={
+      Object {
+        "count": 1000,
+      }
+    }
+    username="ersel"
+  />
+</div>
+`;
