@@ -4,6 +4,7 @@ import ProfileCard from '../components/profile-card';
 import RepoList from '../components/repo-list';
 import fetchGitHubProfile from '../services/fetchGitHubProfile';
 
+
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,7 @@ class Profile extends Component {
   }
 
   componentDidMount() {
+    console.log('goGetGetch is called within componentDidMount');
     this.goGetFetch();
   }
 
@@ -23,10 +25,10 @@ class Profile extends Component {
   };
 
   goGetFetch = () => {
-    fetchGitHubProfile(this.state.username)
+    const { username } = this.state;
+    return fetchGitHubProfile(username)
       .then(data => {
-        console.log(data);
-        return this.setState({ profileData: data });
+        this.setState({ profileData: data });
       });
   };
 
