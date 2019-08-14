@@ -18,6 +18,12 @@ git clone git@github.com:MCRcodes/react-teamwork.git
 npm install
 ```
 
+### Checkout to your cohort branch
+
+```bash
+git checkout june19
+```
+
 ### Checkout to your feature branch
 
 ```bash
