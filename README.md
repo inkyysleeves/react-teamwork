@@ -63,6 +63,7 @@ With `username` being any string you wish to use as username, you should see a s
 ### `<ContributionSummary />`
 
 ![ContributionSummary](https://github.com/MCRcodes/react-teamwork/blob/master/public/img/contribution-summary.png?raw=true)
+Instead of displaying total sum of contributions from last week/last month, please display the 10 most recent contributions as a list.
 
 ## Data source
 
