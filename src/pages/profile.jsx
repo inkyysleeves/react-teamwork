@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import ContributionSummary from '../components/contribution-summary';
-import ProfileCard from '../components/profile-card';
-import RepoList from '../components/repo-list';
 
 const URL = 'https://mcr-codes-cohorts.herokuapp.com/users/';
 
@@ -31,9 +28,7 @@ class Profile extends Component {
 
     return (
       <div>
-        <ProfileCard username={username} profile={this.state.profileData.profile} />
-        <RepoList username={username} repos={this.state.profileData.repos} />
-        <ContributionSummary username={username} events={this.state.profileData.events} contributions={this.state.profileData.contributions} />
+        <h1>display you component here!</h1>
       </div>
     );
   }
