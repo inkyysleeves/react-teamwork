@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Contributions from '../components/contribution-summary';
 import ProfileCard from '../components/profile-card';
+
 
 const URL = 'https://mcr-codes-cohorts.herokuapp.com/users/';
 
@@ -24,7 +26,6 @@ class Profile extends Component {
 
   render() {
     const { username } = this.state;
-
     if (!this.state.profileData.repos) {
       return <div>Loading...</div>;
     }
@@ -39,6 +40,10 @@ class Profile extends Component {
           following={this.state.profileData.profile.following}
           location={this.state.profileData.profile.location}
           company={this.state.profileData.profile.company}
+        />
+        <Contributions
+          totalContributions={this.state.profileData.contributions}
+          events={this.state.profileData.events}
         />
       </div>
     );
