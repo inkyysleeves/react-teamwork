@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Contributions from '../components/contribution-summary';
 
 const URL = 'https://mcr-codes-cohorts.herokuapp.com/users/';
 
@@ -21,14 +22,17 @@ class Profile extends Component {
 
   render() {
     const { username } = this.state;
-
     if (!this.state.profileData.repos) {
       return <div>Loading...</div>;
     }
 
     return (
       <div>
-        <h1>display you component here!</h1>
+        <Contributions
+          totalContributions={this.state.profileData.contributions}
+          events={this.state.profileData.events}
+          repos={this.state.profileData.repos}
+        />
       </div>
     );
   }
