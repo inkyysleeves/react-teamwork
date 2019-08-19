@@ -25,6 +25,7 @@ class Profile extends Component {
   }
 
   render() {
+    console.log(this.state.profileData);
     const { username } = this.state;
     if (!this.state.profileData.repos) {
       return <div>Loading...</div>;
@@ -44,6 +45,7 @@ class Profile extends Component {
         <Contributions
           totalContributions={this.state.profileData.contributions}
           events={this.state.profileData.events}
+          repos={this.state.profileData.repos}
         />
       </div>
     );

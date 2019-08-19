@@ -3,7 +3,7 @@ import React from 'react';
 const Contributions = (props) => {
   const pushes = props.events.filter(event => event.type === 'PushEvent');
   const repos = props.repos.map(repo => repo.name);
-  console.log(repos);
+  console.log(props);
   return (
     <div>
       <h1>
@@ -21,11 +21,6 @@ const Contributions = (props) => {
       <h1>
           there have been {repos.length} events created.
       </h1>
-      {
-      repos.map(repo => {
-        return <p key={repo}>{`${repo}: ${pushes.filter(push => push.repo === repo).length}`}</p>;
-      })
-      }
     </div>
   );
 };
